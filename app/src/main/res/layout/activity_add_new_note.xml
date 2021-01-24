@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewNoteActivity"
+    android:background="@color/LayoutBg">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_back"
+        android:tint="@color/HintColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnDone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_done"
+        android:padding="5dp"
+        android:background="@drawable/done_shape"
+        android:tint="@color/HintColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EditNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@null"
+        android:fontFamily="@font/ubuntu_bold"
+        android:hint="Note Title"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/HintColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+
+    <View
+        android:id="@+id/View"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        android:background="@drawable/note_title_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/NoteDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="2.Feb"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/View"
+        app:layout_constraintTop_toBottomOf="@+id/EditNoteTitle" />
+
+    <EditText
+        android:id="@+id/EditNoteBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@null"
+        android:fontFamily="@font/ubuntu_bold"
+        android:hint="Note Content"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:minHeight="100dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/HintColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/View"
+        app:layout_constraintTop_toBottomOf="@id/NoteDate" />
+
+    <include layout="@layout/layout_changer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

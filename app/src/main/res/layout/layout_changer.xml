@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ConstraintLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pp="http://schemas.android.com/tools"
+    android:background="@drawable/change_color_background"
+    app:behavior_peekHeight="40dp"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <TextView
+        android:id="@+id/Changer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:text="Color changer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutNoteColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Changer">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/colorView1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_note_color_1" />
+
+            <ImageView
+                android:id="@+id/imageColor1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_done"
+                android:tint="@android:color/white" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/colorView2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_note_color_2" />
+
+            <ImageView
+                android:id="@+id/imageColor2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="10dp"
+                android:tint="@android:color/white" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/colorView3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_note_color_3" />
+
+            <ImageView
+                android:id="@+id/imageColor3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="10dp"
+                android:tint="@android:color/white" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/colorView4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_note_color_4" />
+
+            <ImageView
+                android:id="@+id/imageColor4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="10dp"
+                android:tint="@android:color/white" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_bold"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="Pick color"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#2E2C2C</color>
+    <color name="colorAccent">#FF9100</color>
+
+    <color name="HintColor">#7B7B7B</color>
+    <color name="LayoutBg">#2E2C2C</color>
+    <color name="YellowColor">#FF9100</color>
+
+    <color name="colorNote1">#7B7B7B</color>
+    <color name="colorNote2">#FFC400</color>
+    <color name="colorNote3">#F50057</color>
+    <color name="colorNote4">#651FFF</color>
+</resources>
