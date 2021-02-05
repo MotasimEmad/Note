@@ -74,22 +74,25 @@ class MainActivity : AppCompatActivity(){
                 }
 
                 override fun onSuccess(notes: List<Note>) {
-                    adapter2.setList(notes as java.util.ArrayList<Note>?, this@MainActivity, NoteAdapter.DeleteItemClick { position, id ->
-                      mNotesDataBase.noteDao().deleteNote(id)
-                          .subscribeOn(Schedulers.computation())
-                          .subscribe(object : CompletableObserver {
-                              override fun onSubscribe(d: Disposable) {
+                    adapter2.setList(notes as java.util.ArrayList<Note>, this@MainActivity, object :
+                        NoteAdapter.DeleteItemClick {
+                        override fun onItemDelete(position: Int, id: Int) {
+                            mNotesDataBase.noteDao().deleteNote(id)
+                                .subscribeOn(Schedulers.computation())
+                                .subscribe(object : CompletableObserver {
+                                    override fun onSubscribe(d: Disposable) {
 
-                              }
+                                    }
 
-                              override fun onComplete() {
+                                    override fun onComplete() {
 
-                              }
+                                    }
 
-                              override fun onError(e: Throwable) {
+                                    override fun onError(e: Throwable) {
 
-                              }
-                          })
+                                    }
+                                })
+                        }
                     })
                     adapter2.notifyDataSetChanged()
                 }

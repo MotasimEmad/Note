@@ -30,16 +30,15 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.PostViewHolder>() {
     private var notesList: ArrayList<Note>? = ArrayList()
     private var context: Context? = null
     private var deleteItemClick: DeleteItemClick? = null
-    private var timer: Timer? = null
     private var notesSourc: ArrayList<Note>? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteAdapter.PostViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.note_container, parent, false)
         return PostViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: NoteAdapter.PostViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         holder.date.text = notesList!![position].date
         holder.title.text = notesList!![position].title
         holder.body.text = notesList!![position].body
