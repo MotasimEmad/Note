@@ -8,4 +8,31 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="FullScreen" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="NeumorphismImageSmall">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">21sp</item>
+    </style>
+
+    <style name="NeumorphismImageLarge">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">32sp</item>
+    </style>
+
+    <style name="NeumorphismImageOther">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">8sp</item>
+    </style>
+
+    <style name="NeumorphismCardImage">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">@dimen/_10sdp</item>
+    </style>
+
 </resources>

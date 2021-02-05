@@ -7,31 +7,37 @@
     tools:context=".AddNewNoteActivity"
     android:background="@color/LayoutBg">
 
-    <ImageView
+    <soup.neumorphism.NeumorphImageView
         android:id="@+id/btnBack"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        app:neumorph_shapeAppearance="@style/NeumorphismImageSmall"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
         android:src="@drawable/ic_back"
-        android:tint="@color/HintColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:tint="@color/Primary"
+        android:padding="@dimen/_16sdp" />
 
-    <ImageView
+    <soup.neumorphism.NeumorphImageView
         android:id="@+id/btnDone"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_done"
-        android:padding="5dp"
-        android:background="@drawable/done_shape"
-        android:tint="@color/HintColor"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        app:neumorph_shapeAppearance="@style/NeumorphismImageSmall"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        android:src="@drawable/ic_done"
+        android:tint="@color/Primary"
+        android:padding="@dimen/_16sdp" />
 
     <EditText
         android:id="@+id/EditNoteTitle"
@@ -92,7 +98,7 @@
         android:layout_marginRight="16dp"
         android:background="@null"
         android:fontFamily="@font/ubuntu_bold"
-        android:hint="Note Content"
+        android:hint="Type note here ..."
         android:imeOptions="actionDone"
         android:importantForAutofill="no"
         android:includeFontPadding="false"
@@ -105,6 +111,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/View"
         app:layout_constraintTop_toBottomOf="@id/NoteDate" />
+
+    <ImageView
+        android:id="@+id/NoteImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditNoteBody"
+        android:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageRemove"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#D81B60"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@id/NoteImage"
+        app:layout_constraintTop_toTopOf="@id/NoteImage"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_delete"
+            android:tint="@android:color/white" />
+
+    </androidx.cardview.widget.CardView>
 
     <include layout="@layout/layout_changer" />
 

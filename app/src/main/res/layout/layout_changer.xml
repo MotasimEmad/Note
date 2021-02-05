@@ -30,7 +30,6 @@
         android:layout_margin="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Changer">
@@ -121,11 +120,46 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubuntu_bold"
             android:includeFontPadding="false"
+            android:text="Pick color"
             android:textColor="@android:color/white"
             android:textSize="13sp"
-            android:text="Pick color"
             android:textStyle="bold" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAddImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNoteColor">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_add_image"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:includeFontPadding="false"
+            android:text="Add image"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#2E2C2C</color>
+    <color name="colorPrimaryDark">#212121</color>
     <color name="colorAccent">#FF9100</color>
 
     <color name="HintColor">#7B7B7B</color>
-    <color name="LayoutBg">#2E2C2C</color>
+    <color name="LayoutBg">#212121</color>
     <color name="YellowColor">#FF9100</color>
 
     <color name="colorNote1">#7B7B7B</color>
-    <color name="colorNote2">#FFC400</color>
+    <color name="colorNote2">#FF9100</color>
     <color name="colorNote3">#F50057</color>
     <color name="colorNote4">#651FFF</color>
+
+    <color name="Primary">#A3B5BF</color>
+    <color name="background">#EBEBEB</color>
+    <color name="primary_text">#676767</color>
+    <color name="secondary_text">#212121</color>
+    <color name="dark_shadow">#383737</color>
+    <color name="light_shadow">#313030</color>
 </resources>

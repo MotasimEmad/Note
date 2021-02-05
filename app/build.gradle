@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.example.notes"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -45,4 +45,10 @@ dependencies {
 
     // Add Gson
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    // Add Neumorphism
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
 }
